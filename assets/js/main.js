@@ -33,6 +33,45 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
+
+	//// Commit 1 ////
+
+	// Verificación de conexión
+	console.log('✅ main.js cargado correctamente');
+
+	// Selección de un elemento del DOM
+	const titulo = document.getElementById('titulo');
+
+	// Cambiar su contenido si existe
+	if (titulo) {
+	titulo.textContent = 'Texto cambiado desde main.js';
+	}
+
+	//// Commit 2 ////
+
+	const btn = document.getElementById('btn-action');
+
+	if (btn) {
+		btn.addEventListener('click', () => {
+			alert('🚀 Botón pulsado correctamente');
+		});
+	}
+
+	//// Commit 3 //// 	(Con el DevoTools si se inspecciona el elemento header, se puede ver el cambio de estilo
+
+	const header = document.querySelector('header');
+
+	window.addEventListener('scroll', () => {
+		if (header) {
+			if (window.scrollY > 100) {
+				header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+				header.style.color = 'white';
+			} else {
+				header.style.backgroundColor = 'transparent';
+				header.style.color = 'inherit';
+			}
+		}
+	});
 });
 
 // Add your custom functions here
