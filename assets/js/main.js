@@ -72,6 +72,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		}
 	});
+
+	//// Extra //// 
+	
+	// Evento de teclado (Detectar tecla pulsada y mostrarla en consola)
+	document.addEventListener('keydown', (e) => {
+		console.log('Tecla pulsada:', e.key);
+	});
+
+	// Evento de input (Actualizar el contenido de un elemento en tiempo real)
+	const input = document.querySelector('input');
+	const salida = document.getElementById('salida');
+
+	input.addEventListener('input', () => {
+		salida.textContent = input.value;
+	});
 });
 
 // Add your custom functions here
